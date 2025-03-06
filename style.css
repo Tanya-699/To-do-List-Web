@@ -1,0 +1,152 @@
+:root {
+  --primary-bg: #ffffff;
+  --secondary-bg: #f7f7f7;
+  --text-color: #333;
+  --button-color: #ff6b6b;
+  --button-hover: #ff4757;
+}
+
+.dark-mode {
+  --primary-bg: #1e1e1e;
+  --secondary-bg: #2e2e2e;
+  --text-color: #ffffff;
+  --button-color: #ff4757;
+  --button-hover: #ff6b6b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--primary-bg);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 100%;
+  max-width: 450px;
+  background: var(--secondary-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.row input,
+.row select {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.row button {
+  background: var(--button-color);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.row button:hover {
+  background: var(--button-hover);
+}
+
+.search-bar {
+  margin-top: 10px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+ul li {
+  background: var(--primary-bg);
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+ul li.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.delete-btn, .edit-btn {
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  background: none;
+}
+
+.delete-btn {
+  color: red;
+}
+
+.edit-btn {
+  color: blue;
+}
+
+.clear-btn {
+  background: red;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.clear-btn:hover {
+  background: darkred;
+}
+
+@media (max-width: 500px) {
+  .row {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced To-Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.14.0/Sortable.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <div class="header">
+          <h2>To-Do List</h2>
+          <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        </div>
+
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Add a new task..." />
+          <select id="priority">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <input type="date" id="due-date" />
+          <button onclick="addTask()">Add</button>
+        </div>
+
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-box"
+            placeholder="Search tasks..."
+            onkeyup="filterTasks()"
+          />
+        </div>
+
+        <ul id="list-container"></ul>
+
+        <div class="controls">
+          <button onclick="clearAllTasks()" class="clear-btn">Clear All</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
